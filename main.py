@@ -32,14 +32,12 @@ while video.isOpened():
         # referência horizontal na altura do joelho
         pnt_ref_horizontal = [joelho[0] - 100, joelho[1]]
 
-        # pnt de referência vertical (abaixo do quadril, mesma distância até o tornozelo)
+        # referência vertical
         pnt_ref_vertical = [quadril[0], quadril[1] + 100]
 
-        # Calcula ângulo da perna com a vertical
         angulo_perna = calcular_angulo(pnt_ref_vertical, joelho, tornozelo)
         inicio_perna, varredura_perna = angulo_entre(pnt_ref_vertical, joelho, tornozelo)
 
-        # Calcula ângulo de referência com a linha horizontal
         angulo_referencia = calcular_angulo(pnt_ref_vertical, joelho, pnt_ref_horizontal)
         inicio_ref, varredura_ref = angulo_entre(pnt_ref_vertical, joelho, pnt_ref_horizontal)
 
